@@ -1,0 +1,15 @@
+{
+    "title": "ShinoTakusanのAtcoderメモ",
+    "plugins": [
+        "katex",
+        "navigator",
+        "expand-active-chapter"
+    ],
+    "language": "ja",
+    "pluginsConfig": {
+        "uml": {
+            "charset": "utf-8",
+            "format": "svg"
+        }
+    }
+}
