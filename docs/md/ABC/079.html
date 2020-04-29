@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>064 · ShinoTakusanのAtcoderメモ</title>
+        <title>079 · ShinoTakusanのAtcoderメモ</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -69,10 +69,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="079.html" />
     
-    
-    <link rel="prev" href="049.html" />
+    <link rel="prev" href="064.html" />
     
 
     </head>
@@ -141,7 +139,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.2" data-path="064.html">
+        <li class="chapter " data-level="1.2.2" data-path="064.html">
             
                 <a href="064.html">
             
@@ -154,7 +152,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="079.html">
+        <li class="chapter active" data-level="1.2.3" data-path="079.html">
             
                 <a href="079.html">
             
@@ -254,7 +252,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >064</a>
+        <a href="../.." >079</a>
     </h1>
 </div>
 
@@ -269,13 +267,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="ABC064">ABC064</h1>
+                                <h1 id="ABC079">ABC079</h1>
 <h2 id="D&#x554F;&#x984C;">1. D&#x554F;&#x984C;</h2>
-<p><a href="https://atcoder.jp/contests/abc064/submissions/12485147" target="_blank"><strong>&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;</strong></a></p>
-<p><strong>&#x5178;&#x578B;&#x3001;stack</strong>&#xFF1A;&#x3053;&#x306E;&#x624B;&#x306E;&#x3082;&#x306E;&#x306F;&#x3001;&#x5DE6;&#x304B;&#x3063;&#x3053;&#x306B;&#x6CE8;&#x76EE;&#x3059;&#x308B;&#x3068;&#x3046;&#x307E;&#x304F;&#x3044;&#x304F;&#x3002;&#x4ECA;&#x56DE;&#x306E;&#x51FA;&#x529B;&#x306F;&#x3001;&#x8F9E;&#x66F8;&#x9806;&#x3067;&#x6700;&#x5C0F;&#x306A;&#x3082;&#x306E;&#x3067;&#x3042;&#x308B;&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;&#x306B;&#x6CE8;&#x610F;&#x3057;&#x3088;&#x3046;&#x3002;&#x5909;&#x6570;pointer&#x3067;&#x3001;&#x5143;&#x3005;S&#x306B;&#x542B;&#x307E;&#x308C;&#x3066;&#x3044;&#x308B;pair&#x8A18;&#x9332;&#x3057;&#x3064;&#x3064;&#x3001;need_left&#x3067;,
-&#x300C;&#x3082;&#x3057;&#x3082;&#x3001; <strong>)</strong> &#x304C;&#x4F59;&#x308B;&#x306A;&#x3089;&#x3070;&#x3001;&#x8F9E;&#x66F8;&#x9806;&#x306B;&#x3059;&#x308B;&#x305F;&#x3081;&#x306B;&#x5DE6;&#x7AEF;&#x306B; <strong>(</strong> &#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x300D;&#x305F;&#x3081;&#x306E;&#x8A18;&#x9332;&#x3092;&#x3059;&#x308B;&#x3002;&#x540C;&#x69D8;&#x306A;&#x554F;&#x984C;&#x304C;&#x591A;&#x6570;&#x3042;&#x308B;&#x306E;&#x3067;&#x7D4C;&#x9A13;&#x3057;&#x3066;&#x304A;&#x304F;&#x3068;&#x3044;&#x3044;&#x3002;</p>
-<p>&#x53C2;&#x8003;&#xFF1A;<a href="https://drken1215.hatenablog.com/entry/2019/02/16/080900" target="_blank">https://drken1215.hatenablog.com/entry/2019/02/16/080900</a></p>
-<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#ABC064">ABC064</a></p><li><a href="#D&#x554F;&#x984C;">1. D&#x554F;&#x984C;</a></li></ul></div><a href="#D&#x554F;&#x984C;" id="goTop"><i class="fa fa-arrow-up"></i></a>
+<p><a href="https://atcoder.jp/contests/abc079/submissions/12498315" target="_blank"><strong>&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;</strong></a></p>
+<p><strong>&#x6700;&#x77ED;&#x7D4C;&#x8DEF;&#x554F;&#x984C;&#x3000;&#x30EF;&#x2015;&#x30B7;&#x30E3;&#x30EB;&#x30D5;&#x30ED;&#x30A4;&#x30C9;&#x6CD5;</strong>&#xFF1A;&#x3053;&#x306E;&#x554F;&#x984C;&#x306F;&#x3001;the&#x30EF;&#x2015;&#x30B7;&#x30E3;&#x30EB;&#x30D5;&#x30ED;&#x30A4;&#x30C9;&#x3063;&#x3066;&#x3044;&#x3046;&#x611F;&#x3058;&#x3067;&#x3042;&#x308B;&#x3002;&#x5C11;&#x3057;&#x8003;&#x5BDF;&#x3059;&#x308B;&#x3068;<u><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">A_{ij}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>&#x304B;&#x3089;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span></span></span></span>&#x306B;&#x3059;&#x308B;&#x305F;&#x3081;&#x306E;&#x6700;&#x77ED;&#x7D4C;&#x8DEF;</u>&#x3092;<u><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>c</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">c_{ij}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">c</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>&#x306E;&#x306A;&#x304B;&#x304B;&#x3089;&#x63A2;&#x305B;&#x3070;&#x3044;&#x3044;</u>&#x3053;&#x3068;&#x306B;&#x6C17;&#x4ED8;&#x304F;&#x306F;&#x305A;&#x3067;&#x3042;&#x308B;&#x3002;&#x4ECA;&#x56DE;&#x306F;&#x3001;&#x91CD;&#x307F;&#x304C;&#x3042;&#x308B;&#x305F;&#x3081;&#x306B;BFS&#x306B;&#x3088;&#x308B;&#x6700;&#x77ED;&#x7D4C;&#x8DEF;&#x306F;&#x63A2;&#x7D22;&#x3067;&#x304D;&#x305A;&#x3001;&#x6709;&#x5411;&#x30B0;&#x30E9;&#x30D5;&#x3067;&#x3042;&#x308B;&#x305F;&#x3081;&#x3001;&#x30C0;&#x30A4;&#x30AF;&#x30B9;&#x30C8;&#x30E9;&#x6CD5;&#x3067;&#x3082;&#x89E3;&#x3051;&#x306A;&#x3044;&#x3002;&#x3057;&#x304B;&#x3057;&#x3001;<u>&#x30EF;&#x2015;&#x30B7;&#x30E3;&#x30EB;&#x30D5;&#x30ED;&#x30A4;&#x30C9;&#x6CD5;</u>&#x3092;&#x4F7F;&#x3048;&#x3070;&#x305D;&#x306E;&#x3088;&#x3046;&#x306A;&#x30B0;&#x30E9;&#x30D5;&#x306B;&#x3082;&#x5BFE;&#x5FDC;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x53EF;&#x80FD;&#x3067;&#x3042;&#x308B;&#x3002;</p>
+<p>&#x30EF;&#x2015;&#x30B7;&#x30E3;&#x30EB;&#x30D5;&#x30ED;&#x30A4;&#x30C9;&#x6CD5;&#x306E;&#x304F;&#x308F;&#x3057;&#x3044;&#x8AAC;&#x660E;&#x306F;&#x3053;&#x3053;&#xFF1A;<a href="https://qiita.com/okaryo/items/8e6cd73f8a676b7a5d75" target="_blank">https://qiita.com/okaryo/items/8e6cd73f8a676b7a5d75</a></p>
+<p>&#x53C2;&#x8003;&#xFF1A;<a href="https://img.atcoder.jp/abc079/editorial.pdf" target="_blank">https://img.atcoder.jp/abc079/editorial.pdf</a></p>
+<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#ABC079">ABC079</a></p><li><a href="#D&#x554F;&#x984C;">1. D&#x554F;&#x984C;</a></li></ul></div><a href="#D&#x554F;&#x984C;" id="goTop"><i class="fa fa-arrow-up"></i></a>
                                 
                                 </section>
                             
@@ -302,14 +300,10 @@
 
             
                 
-                <a href="049.html" class="navigation navigation-prev " aria-label="Previous page: 049">
+                <a href="064.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 064">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="079.html" class="navigation navigation-next " aria-label="Next page: 079">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -318,7 +312,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"064","level":"1.2.2","depth":2,"next":{"title":"079","level":"1.2.3","depth":2,"path":"md/ABC/079.md","ref":"./md/ABC/079.md","articles":[]},"previous":{"title":"049","level":"1.2.1","depth":2,"path":"md/ABC/049.md","ref":"./md/ABC/049.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","navigator","expand-active-chapter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"uml":{"charset":"utf-8","format":"svg"},"navigator":{},"expand-active-chapter":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ShinoTakusanのAtcoderメモ","language":"ja","gitbook":"*"},"file":{"path":"md/ABC/064.md","mtime":"2020-04-29T15:07:25.156Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-29T16:30:56.016Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"079","level":"1.2.3","depth":2,"next":{"title":"ARC","level":"1.3","depth":1,"ref":"","articles":[]},"previous":{"title":"064","level":"1.2.2","depth":2,"path":"md/ABC/064.md","ref":"./md/ABC/064.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","navigator","expand-active-chapter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"uml":{"charset":"utf-8","format":"svg"},"navigator":{},"expand-active-chapter":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ShinoTakusanのAtcoderメモ","language":"ja","gitbook":"*"},"file":{"path":"md/ABC/079.md","mtime":"2020-04-29T16:30:16.439Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-29T16:30:56.016Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
