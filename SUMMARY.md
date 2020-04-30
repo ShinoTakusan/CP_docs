@@ -6,7 +6,8 @@
   * [064](./md/ABC/064.md)
   * [079](./md/ABC/079.md)
   * [084](./md/ABC/084.md)
-* ARC
-* AGC
-* Other Rated Contests
-* Other Contests
+* [ARC](md/ARC/ARC.md)
+* [AGC](md/ARC/ARC.md)
+  * [005](md/AGC/005.md)
+* [Other Rated Contests](./md/OtherRatedContests/Other_Rated_Contests.md)
+* [Other Contests](./md/OtherContests/Other_Contests.md)
