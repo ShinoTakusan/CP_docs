@@ -7,6 +7,7 @@
   * [079](./md/ABC/079.md)
   * [084](./md/ABC/084.md)
   * [153](md/ABC/153.md)
+  * [156](md/ABC/156.md)
   * [161](md/ABC/161.md)
 * [ARC](md/ARC/ARC.md)
 * [AGC](md/ARC/ARC.md)
@@ -15,3 +16,4 @@
 * [Other Contests](./md/OtherContests/Other_Contests.md)
 * [Argorithm](./md/Algorithm/Algo.md)
   * [ナップサック問題](md/Algorithm/knapsack.md)
+  * [繰り返し自乗法](md/Algorithm/repeartedSquareMethod.md)
