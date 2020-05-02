@@ -1,0 +1,541 @@
+
+<!DOCTYPE HTML>
+<html lang="ja" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>繰り返し自乗法 · ShinoTakusanのAtcoderメモ</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-navigator/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expand-active-chapter/expand-active-chapter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="knapsack.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="検索すると入力" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    HOME
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../ABC/ABC.html">
+            
+                <a href="../ABC/ABC.html">
+            
+                    
+                    ABC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../ABC/049.html">
+            
+                <a href="../ABC/049.html">
+            
+                    
+                    049
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../ABC/064.html">
+            
+                <a href="../ABC/064.html">
+            
+                    
+                    064
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../ABC/079.html">
+            
+                <a href="../ABC/079.html">
+            
+                    
+                    079
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../ABC/084.html">
+            
+                <a href="../ABC/084.html">
+            
+                    
+                    084
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../ABC/088.html">
+            
+                <a href="../ABC/088.html">
+            
+                    
+                    088
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../ABC/112.html">
+            
+                <a href="../ABC/112.html">
+            
+                    
+                    112
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../ABC/153.html">
+            
+                <a href="../ABC/153.html">
+            
+                    
+                    153
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../ABC/156.html">
+            
+                <a href="../ABC/156.html">
+            
+                    
+                    156
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../ABC/161.html">
+            
+                <a href="../ABC/161.html">
+            
+                    
+                    161
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../ABC/165.html">
+            
+                <a href="../ABC/165.html">
+            
+                    
+                    165
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ARC/ARC.html">
+            
+                <a href="../ARC/ARC.html">
+            
+                    
+                    ARC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../ARC/ARC.html">
+            
+                <a href="../ARC/ARC.html">
+            
+                    
+                    AGC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../AGC/005.html">
+            
+                <a href="../AGC/005.html">
+            
+                    
+                    005
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../OtherRatedContests/Other_Rated_Contests.html">
+            
+                <a href="../OtherRatedContests/Other_Rated_Contests.html">
+            
+                    
+                    Other Rated Contests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../OtherContests/Other_Contests.html">
+            
+                <a href="../OtherContests/Other_Contests.html">
+            
+                    
+                    Other Contests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="Algo.html">
+            
+                <a href="Algo.html">
+            
+                    
+                    Argorithm
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="knapsack.html">
+            
+                <a href="knapsack.html">
+            
+                    
+                    ナップサック問題
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.2" data-path="repeartedSquareMethod.html">
+            
+                <a href="repeartedSquareMethod.html">
+            
+                    
+                    繰り返し自乗法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            GitBookで公開 
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >繰り返し自乗法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7E70;&#x308A;&#x8FD4;&#x3057;&#x81EA;&#x4E57;&#x6CD5;">&#x7E70;&#x308A;&#x8FD4;&#x3057;&#x81EA;&#x4E57;&#x6CD5;</h1>
+<h2 id="&#x7E70;&#x308A;&#x8FD4;&#x3057;&#x81EA;&#x4E57;&#x6CD5;&#x3068;&#x306F;">1. &#x7E70;&#x308A;&#x8FD4;&#x3057;&#x81EA;&#x4E57;&#x6CD5;&#x3068;&#x306F;</h2>
+<p>&#x7E70;&#x308A;&#x8FD4;&#x3057;2&#x4E57;&#x6CD5;&#x3068;&#x306F;&#x3001;&#x6574;&#x6570;&#x306E;n&#x4E57;&#x3092;&#x52B9;&#x7387;&#x3088;&#x304F;&#x6C42;&#x3081;&#x308B;&#x65B9;&#x6CD5;&#x3067;&#x3042;&#x308B;&#x3002;&#x4EFB;&#x610F;&#x306E;&#x6574;&#x6570;a&#x306E;n&#x4E57;&#x3092;a&#x3092;n&#x89E3;&#x304B;&#x3051;&#x308B;&#x3068;&#x5B9F;&#x88C5;(&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x5B9F;&#x88C5;)&#x3057;&#x305F;&#x5834;&#x5408;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>&#x3068;&#x306A;&#x308B;&#x3002;&#x3053;&#x306E;&#x8A08;&#x7B97;&#x91CF;&#x3092;&#x7E70;&#x308A;&#x8FD4;&#x3057;&#x81EA;&#x4E57;&#x6CD5;&#x3092;&#x4F7F;&#x3046;&#x3053;&#x3068;&#x3067;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(logn)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>&#x306B;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;&#x3002;</p>
+<pre><code class="lang-cpp">ll res = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)
+    res *= a;
+</code></pre>
+<h2 id="&#x8003;&#x3048;&#x65B9;">2. &#x8003;&#x3048;&#x65B9;</h2>
+<p>&#x8003;&#x3048;&#x65B9;&#x306F;&#x81F3;&#x3063;&#x3066;&#x5358;&#x7D14;&#x3067;&#x3042;&#x308B;&#x3002;&#x8A66;&#x3057;&#x306B;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mn>1</mn><mn>0</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2^{10}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">1</span><span class="mord mathrm mtight">0</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>&#x3067;&#x8003;&#x3048;&#x308B;&#x3002;&#x3053;&#x308C;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x5206;&#x89E3;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x53EF;&#x80FD;&#x3067;&#x3042;&#x308B;&#x3002;</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtable><mtr><mtd><mrow><msup><mn>2</mn><mrow><mn>1</mn><mn>0</mn></mrow></msup></mrow></mtd><mtd><mrow><mrow></mrow><mo>=</mo><mo>(</mo><msup><mn>2</mn><mn>5</mn></msup><msup><mo>)</mo><mn>2</mn></msup></mrow></mtd></mtr><mtr><mtd><mrow></mrow></mtd><mtd><mrow><mrow></mrow><mo>=</mo><mo>(</mo><mo>(</mo><msup><mn>2</mn><mn>2</mn></msup><msup><mo>)</mo><mn>2</mn></msup><mo>&#xD7;</mo><msup><mn>2</mn><mn>1</mn></msup><msup><mo>)</mo><mn>2</mn></msup></mrow></mtd></mtr><mtr><mtd><mrow></mrow></mtd><mtd><mrow><mrow></mrow><mo>=</mo><mo>(</mo><mo>(</mo><mo>(</mo><msup><mn>2</mn><mn>1</mn></msup><msup><mo>)</mo><mn>2</mn></msup><msup><mo>)</mo><mn>2</mn></msup><mo>&#xD7;</mo><msup><mn>2</mn><mn>1</mn></msup><msup><mo>)</mo><mn>2</mn></msup></mrow></mtd></mtr><mtr><mtd><mrow></mrow></mtd></mtr></mtable></mrow><annotation encoding="application/x-tex">
+\begin{aligned}
+2^{10}&amp;=(2^5)^2\\
+      &amp;=((2^2)^2\times2^1)^2\\
+      &amp;=(((2^1)^2)^2\times2^1)^2\\
+\end{aligned}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:2.686162em;"></span><span class="strut bottom" style="height:4.872323999999999em;vertical-align:-2.1861619999999995em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist"><span style="top:-1.822054em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">1</span><span class="mord mathrm mtight">0</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span style="top:-0.5979459999999996em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"></span></span><span style="top:0.6261619999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"></span></span><span style="top:1.8261619999999994em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="col-align-l"><span class="vlist"><span style="top:-1.822054em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord displaystyle textstyle uncramped"></span><span class="mrel">=</span><span class="mopen">(</span><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">5</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span style="top:-0.5979459999999996em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord displaystyle textstyle uncramped"></span><span class="mrel">=</span><span class="mopen">(</span><span class="mopen">(</span><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#xD7;</span><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span style="top:0.6261619999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord displaystyle textstyle uncramped"><span class="mord displaystyle textstyle uncramped"></span><span class="mrel">=</span><span class="mopen">(</span><span class="mopen">(</span><span class="mopen">(</span><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#xD7;</span><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></span></span></p>
+<p>&#x3053;&#x306E;&#x3088;&#x3046;&#x306A;&#x5206;&#x89E3;&#x306E;&#x8003;&#x3048;&#x65B9;&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;&#x8A08;&#x7B97;&#x91CF;&#x3092;&#x6E1B;&#x3089;&#x3059;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;&#x3002;</p>
+<h2 id="&#x5B9F;&#x88C5;">3. &#x5B9F;&#x88C5;</h2>
+<p>&#x3067;&#x306F;&#x3001;&#x4E0A;&#x306E;&#x8003;&#x3048;&#x65B9;&#x306B;&#x305D;&#x3063;&#x3066;&#x5B9F;&#x88C5;&#x3092;&#x3057;&#x3066;&#x3044;&#x304F;&#x3002;</p>
+<pre><code class="lang-cpp"><span class="hljs-function">ll <span class="hljs-title">power</span><span class="hljs-params">(ll n, ll a)</span>
+</span>{
+    ll res = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">while</span> (n)
+    {
+        <span class="hljs-keyword">if</span> (n % <span class="hljs-number">2</span>)<span class="hljs-comment">//2&#x9032;&#x6570;&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;n &amp; 1&#x3068;&#x8AD6;&#x7406;&#x548C;&#x3092;&#x3068;&#x3063;&#x3066;&#x3082;&#x3044;&#x3044;&#x3002;</span>
+        {
+            res = res * a;
+        }
+        a = a * a;
+        n &gt;&gt;= <span class="hljs-number">1</span>;<span class="hljs-comment">//n&#x3092;&#x53F3;&#x306B;1&#x30B7;&#x30D5;&#x30C8;&#x3001;&#x3064;&#x307E;&#x308A;&#x3001;&#xF7;2(&#x5207;&#x308A;&#x6368;&#x3066;)</span>
+    }
+    <span class="hljs-keyword">return</span> res;
+}
+</code></pre>
+<p>&#x6700;&#x5F8C;&#x306B;n&#x3092;&#x5272;&#x308B;2&#x3057;&#x3066;&#x3044;&#x308B;&#x3053;&#x3068;&#x304B;&#x3089;&#x3082;&#x5206;&#x304B;&#x308B;&#x901A;&#x308A;&#x3001;&#x8A08;&#x7B97;&#x91CF;&#x306F;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(logn)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span>&#x3068;&#x306A;&#x308B;&#x3002;</p>
+<p>&#x53C2;&#x8003;&#xFF1A;</p>
+<p><a href="http://satanic0258.hatenablog.com/entry/2016/04/29/004730" target="_blank">&#x7E70;&#x308A;&#x8FD4;&#x3057;&#x81EA;&#x4E57;&#x6CD5;</a></p>
+<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#&#x7E70;&#x308A;&#x8FD4;&#x3057;&#x81EA;&#x4E57;&#x6CD5;">&#x7E70;&#x308A;&#x8FD4;&#x3057;&#x81EA;&#x4E57;&#x6CD5;</a></p><li><a href="#&#x7E70;&#x308A;&#x8FD4;&#x3057;&#x81EA;&#x4E57;&#x6CD5;&#x3068;&#x306F;">1. &#x7E70;&#x308A;&#x8FD4;&#x3057;&#x81EA;&#x4E57;&#x6CD5;&#x3068;&#x306F;</a></li><li><a href="#&#x8003;&#x3048;&#x65B9;">2. &#x8003;&#x3048;&#x65B9;</a></li><li><a href="#&#x5B9F;&#x88C5;">3. &#x5B9F;&#x88C5;</a></li></ul></div><a href="#&#x7E70;&#x308A;&#x8FD4;&#x3057;&#x81EA;&#x4E57;&#x6CD5;&#x3068;&#x306F;" id="goTop"><i class="fa fa-arrow-up"></i></a>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="knapsack.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: ナップサック問題">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"繰り返し自乗法","level":"1.7.2","depth":2,"previous":{"title":"ナップサック問題","level":"1.7.1","depth":2,"path":"md/Algorithm/knapsack.md","ref":"md/Algorithm/knapsack.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","navigator","expand-active-chapter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"uml":{"charset":"utf-8","format":"svg"},"navigator":{},"expand-active-chapter":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ShinoTakusanのAtcoderメモ","language":"ja","gitbook":"*"},"file":{"path":"md/Algorithm/repeartedSquareMethod.md","mtime":"2020-05-01T13:40:09.460Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-02T17:32:23.299Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expand-active-chapter/expand-active-chapter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
